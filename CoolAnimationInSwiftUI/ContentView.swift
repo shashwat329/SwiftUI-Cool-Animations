@@ -7,15 +7,44 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View{
+    let columns = [
+           GridItem(.flexible()),
+           GridItem(.flexible()),
+           GridItem(.flexible())
+       ]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 16) {
+                    ForEach(array) { item in
+                        NavigationLink {
+                            item.destinationView
+                        }label: {
+                            VStack {
+                                item.icon
+                                    .font(.title)
+                                    .foregroundColor(.black)
+                                    .padding(.bottom,4)
+                                Text(item.name)
+                                    .font(.caption)
+                                    .foregroundStyle(Color.white)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .frame(height: 100)
+                            .frame(maxWidth: .infinity)
+                            .background(item.backgroundColor)
+                            .cornerRadius(12)
+                            .shadow(radius: 2)
+                        }
+                    }
+                }
+                .padding()
+            }
+            .navigationTitle("Animation in SwiftUI")
+            .multilineTextAlignment(.center)
+            .lineLimit(2)
         }
-        .padding()
     }
 }
 
