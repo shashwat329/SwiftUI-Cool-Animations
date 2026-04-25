@@ -24,7 +24,7 @@ struct BurstSplashView: View {
                 .ignoresSafeArea()
             Circle()
                 .fill(Color.orangeArmyTheme)
-                .scaleEffect(burst ? 20 : 0.01) // explosion effect
+                .scaleEffect(burst ? 20 : 0.01)
                 .animation(.easeOut(duration: 3.5), value: burst)
             if showContent {
                 VStack{
@@ -35,6 +35,14 @@ struct BurstSplashView: View {
                 VStack{
                     Image("helmet")
                         .padding(.top,90)
+                    Text("Sun Rise Hyderabad")
+                        .foregroundStyle(Color.white)
+                        .font(.caption)
+                        .fontDesign(.monospaced)
+                        .bold()
+                        .padding(.top,-10)
+                        .padding(.bottom)
+                    
                     Text("This is for Orange Army")
                         .foregroundStyle(Color.white)
                         .font(.largeTitle)
@@ -53,7 +61,7 @@ struct BurstSplashView: View {
                     showContent = false
                 }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.7) {
                 withAnimation(.spring() ){
                     showImage = true
                 }
