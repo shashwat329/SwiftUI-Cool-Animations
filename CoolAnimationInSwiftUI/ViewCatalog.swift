@@ -23,6 +23,13 @@ let feedback =  ViewCatalog(
     backgroundColor: Color(.blue).opacity(0.5),
     destinationView: AnyView(ShoppingFeedbackView())
 )
+let srh =  ViewCatalog(
+    name: "Srh",
+    icon: Image(systemName: "figure.cricket"),
+    backgroundColor: Color(.orangeArmyTheme).opacity(0.5),
+    destinationView: AnyView(OrangeArmy())
+)
 let array: [ViewCatalog] = [
-    feedback
+    feedback,
+    srh
 ]

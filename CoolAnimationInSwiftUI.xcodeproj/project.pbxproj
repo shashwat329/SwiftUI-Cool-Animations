@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D780F0372F9E43D60084B99F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D780F0362F9E43D60084B99F /* Lottie */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D7DE67E92F9BC08D0026A74D /* CoolAnimationInSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolAnimationInSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D780F0372F9E43D60084B99F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = CoolAnimationInSwiftUI;
 			packageProductDependencies = (
+				D780F0362F9E43D60084B99F /* Lottie */,
 			);
 			productName = CoolAnimationInSwiftUI;
 			productReference = D7DE67E92F9BC08D0026A74D /* CoolAnimationInSwiftUI.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = D7DE67E02F9BC08D0026A74D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D780F0352F9E43D50084B99F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D7DE67EA2F9BC08D0026A74D /* Products */;
 			projectDirPath = "";
@@ -355,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D780F0352F9E43D50084B99F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D780F0362F9E43D60084B99F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D780F0352F9E43D50084B99F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7DE67E12F9BC08D0026A74D /* Project object */;
 }
