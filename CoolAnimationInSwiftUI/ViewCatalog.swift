@@ -29,7 +29,15 @@ let srh =  ViewCatalog(
     backgroundColor: Color(.orangeArmyTheme).opacity(0.5),
     destinationView: AnyView(OrangeArmy())
 )
+let dhoni =  ViewCatalog(
+    name: "dhoni",
+    icon: Image(systemName: "figure.cricket"),
+    backgroundColor: Color(.yellow).opacity(0.5),
+    destinationView: AnyView(DhoniAnimationView())
+)
+
 let array: [ViewCatalog] = [
     feedback,
-    srh
+    srh,
+    dhoni
 ]

@@ -30,7 +30,7 @@ struct DhoniAnimationView: View {
             // ✅ VStack keeps logo and text vertically stacked and centered
             VStack(spacing: 0) {
                 
-                // Radial glow + CSK Logo block
+//                 Radial glow + CSK Logo block
                 ZStack {
                     if showLogo {
                         RadialGradient(
@@ -115,27 +115,15 @@ struct DhoniAnimationView: View {
                         }
                         
                         // Underline accent bar
-                        RoundedRectangle(cornerRadius: 3)
-                            .fill(Color.white.opacity(0.9))
-                            .frame(width: showWhistleText ? 280 : 0, height: 4)
-                            .animation(
-                                .easeOut(duration: 0.6).delay(0.8),
-                                value: showWhistleText
-                            )
-                            .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
-                            .padding(.top, 6)
-                        
-                        // Subtitle
-                        Text("Chennai Super Kings 🦁")
-                            .font(.system(size: 15, weight: .semibold, design: .rounded))
-                            .foregroundColor(Color.white.opacity(0.9))
-                            .opacity(showWhistleText ? 1 : 0)
-                            .offset(y: showWhistleText ? 0 : 20)
-                            .animation(
-                                .easeOut(duration: 0.5).delay(1.0),
-                                value: showWhistleText
-                            )
-                            .padding(.top, 10)
+//                        RoundedRectangle(cornerRadius: 3)
+//                            .fill(Color.white.opacity(0.9))
+//                            .frame(width: showWhistleText ? 280 : 0, height: 4)
+//                            .animation(
+//                                .easeOut(duration: 0.6).delay(0.8),
+//                                value: showWhistleText
+//                            )
+//                            .shadow(color: Color.black.opacity(0.3), radius: 4, x: 0, y: 2)
+//                            .padding(.top, 6)
                     }
                     .padding(.top, 12)     // ✅ small gap between logo and text
                 }
@@ -157,8 +145,7 @@ struct DhoniAnimationView: View {
                     value: showPlayer
                 )
                 .animation(.easeOut(duration: 0.5), value: playerOpacity)
-            
-            // Dark overlay
+        
             Color.black
                 .opacity(overlayOpacity)
                 .ignoresSafeArea()
@@ -260,18 +247,6 @@ extension Array {
     }
 }
 
-// MARK: - Hex color helper
-extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let r = Double((int >> 16) & 0xFF) / 255
-        let g = Double((int >> 8) & 0xFF) / 255
-        let b = Double(int & 0xFF) / 255
-        self.init(red: r, green: g, blue: b)
-    }
-}
 
 #Preview {
     DhoniAnimationView()
