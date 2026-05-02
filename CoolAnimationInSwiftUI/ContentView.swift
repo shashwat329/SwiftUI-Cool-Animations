@@ -24,7 +24,7 @@ struct ContentView: View{
                             VStack {
                                 item.icon
                                     .font(.title)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.black.opacity(0.8))
                                     .padding(.bottom,4)
                                 Text(item.name)
                                     .font(.caption)

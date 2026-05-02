@@ -148,7 +148,7 @@ struct MoodSlider: View {
 
 // MARK: - Main View
 struct ShoppingFeedbackView: View {
-    @State private var sliderValue: Double = 0.43
+    @State private var sliderValue: Double = 0.49
     @State private var note: String = ""
     @State private var submitted = false
 
