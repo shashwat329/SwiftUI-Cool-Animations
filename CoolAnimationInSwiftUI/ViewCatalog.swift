@@ -39,10 +39,24 @@ let virat =  ViewCatalog(
     name: "virat",
     icon: Image(systemName: "figure.cricket"),
     backgroundColor: Color(.red).opacity(0.5),
-    destinationView: AnyView(DhoniAnimationView())
+    destinationView: AnyView(ViratAggressiveView())
+)
+let vaibhav =  ViewCatalog(
+    name: "Vaibhav",
+    icon: Image(systemName: "figure.cricket"),
+    backgroundColor: Color(.pink).opacity(0.5),
+    destinationView: AnyView(VaibhavApp())
+)
+let nutri =  ViewCatalog(
+    name: "Nutrisphere",
+    icon: Image(systemName: "fork.knife"),
+    backgroundColor: Color(.gray).opacity(0.5),
+    destinationView: AnyView(ChildProfileView())
 )
 let array: [ViewCatalog] = [
     feedback,
     srh,
-    dhoni
+    dhoni,
+    vaibhav,
+    nutri
 ]
